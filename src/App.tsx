@@ -1,9 +1,10 @@
 import "./App.css";
+import { Button } from "@/components/ui/button.tsx";
 
 function App() {
   return (
-    <div>
-      <h1>Kamann-web</h1>
+    <div className="flex flex-col items-center justify-center min-h-svh">
+      <Button>Click me</Button>
     </div>
   );
 }
