@@ -1,12 +1,7 @@
-import "./App.css";
-import { Button } from "@/components/ui/button.tsx";
+import { Navigate } from "react-router";
 
 function App() {
-  return (
-    <div className="flex flex-col items-center justify-center min-h-svh">
-      <Button>Click me</Button>
-    </div>
-  );
+  return <Navigate to="/dashboard" replace />;
 }
 
 export default App;
