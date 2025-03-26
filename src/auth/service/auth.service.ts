@@ -4,6 +4,7 @@ import { AuthApi } from "../api";
 import { useNavigate, useSearchParams } from "react-router";
 import { RETURN_TO_PARAM } from "@/auth/router/constants.ts";
 import { useAuth } from "@/auth/provider/use-auth.ts";
+import { Paths } from "@/app/router/paths.ts";
 
 export function useLogin() {
   const { setAuthToken } = useAuth();
@@ -18,7 +19,7 @@ export function useLogin() {
     if (returnTo) {
       await navigate(returnTo);
     } else {
-      await navigate("/dashboard");
+      await navigate(Paths.protected.dashboard);
     }
   };
 

@@ -52,16 +52,14 @@ export function useAuthInterceptor({
       // response status > 2xx
       async function (error: ApiError) {
         if (isAxiosError(error) && error.status === 401) {
-          try {
-            const response = await AuthApi.refresh();
-            setAuthToken(response.token);
-            // don't process as error
-            return;
-
-            // eslint-disable-next-line @typescript-eslint/no-unused-vars
-          } catch (e) {
-            deleteAuthToken();
-          }
+          AuthApi.refresh()
+            .then((response) => {
+              setAuthToken(response.token);
+              return;
+            })
+            .catch(() => {
+              deleteAuthToken();
+            });
         }
 
         return Promise.reject(error);

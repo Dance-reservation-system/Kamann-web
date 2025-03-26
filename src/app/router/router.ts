@@ -3,6 +3,7 @@ import App from "@/App.tsx";
 import { AuthenticateOutlet } from "@/auth/router/authenticated-outlet.tsx";
 import { LoginPage } from "@/pages/login.page.tsx";
 import { DashboardPage } from "@/pages/dashboard.page.tsx";
+import { Paths } from "./paths";
 
 export const router = createBrowserRouter([
   {
@@ -11,7 +12,7 @@ export const router = createBrowserRouter([
   },
 
   {
-    path: "/login",
+    path: Paths.public.login,
     Component: LoginPage,
   },
 
@@ -19,7 +20,7 @@ export const router = createBrowserRouter([
     Component: AuthenticateOutlet,
     children: [
       {
-        path: "/dashboard",
+        path: Paths.protected.dashboard,
         Component: DashboardPage,
       },
     ],

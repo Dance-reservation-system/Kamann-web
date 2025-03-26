@@ -3,6 +3,7 @@ import { useAuth } from "@/auth/provider/use-auth.ts";
 import { Navigate } from "react-router";
 import { LoginForm } from "@/auth/components/login-form.tsx";
 import { LoginPayload } from "@/auth/api/schema/login.schema.ts";
+import { Paths } from "@/app/router/paths.ts";
 
 export function LoginPage() {
   const auth = useAuth();
@@ -13,7 +14,7 @@ export function LoginPage() {
   };
 
   if (auth.token) {
-    return <Navigate to="/dashboard" replace />;
+    return <Navigate to={Paths.protected.dashboard} replace />;
   }
 
   return (
