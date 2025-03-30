@@ -23,7 +23,7 @@ npm install
 ```bash
 npm run dev
 ```
-The app should start at: http://localhost:5173/
+The app should start at: http://localhost:3000/
 
 
 ## Build
