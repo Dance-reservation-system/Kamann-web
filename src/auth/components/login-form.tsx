@@ -84,9 +84,9 @@ export function LoginForm({
                 />
               </div>
               <Button
-                type="submit"
+                type="button"
                 className="w-full"
-                onSubmit={handleSubmit}
+                onClick={handleSubmit}
                 disabled={isPending}
               >
                 {isPending && <Loader2 className="animate-spin" />}
