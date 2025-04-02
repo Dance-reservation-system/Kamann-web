@@ -1,12 +1,8 @@
-import "./App.css";
-import { Button } from "@/components/ui/button.tsx";
+import { Navigate } from "react-router";
+import { Paths } from "@/app/router/paths.ts";
 
 function App() {
-  return (
-    <div className="flex flex-col items-center justify-center min-h-svh">
-      <Button>Click me</Button>
-    </div>
-  );
+  return <Navigate to={Paths.protected.dashboard} replace />;
 }
 
 export default App;
