@@ -4,22 +4,33 @@
 
 ## Run locally
 
+🚧
+
 ### Requirements
 ```
-Node: >= x
+Node: >= 22.14.0
 ```
 
-### Copy .env to .env.local
+<br />
+
+
+1. Copy .env to .env.local
 ```bash
 cp .env .env.local
 ```
-
-### Install dependencies
+2. Install Corepack
+```bash
+npm install --global corepack@latest
+```
+3. Use pnpm
+```bash
+corepack enable pnpm
+```
+4. Install dependencies
 ```bash
 pnpm install
 ```
-
-### Run
+5. Run
 ```bash
 pnpm run dev
 ```
