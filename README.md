@@ -16,12 +16,12 @@ cp .env .env.local
 
 ### Install dependencies
 ```bash
-npm install
+pnpm install
 ```
 
 ### Run
 ```bash
-npm run dev
+pnpm run dev
 ```
 The app should start at: http://localhost:3000/
 
