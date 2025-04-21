@@ -1,6 +1,6 @@
 import { createBrowserRouter } from "react-router";
 import { AuthenticateOutlet } from "@/auth/router/authenticated-outlet.tsx";
-import { LoginPage } from "@/pages/login.page.tsx";
+import { Login } from "@/routes/login.tsx";
 import { DashboardPage } from "@/pages/dashboard.page.tsx";
 import { Paths } from "./paths";
 import App from "@/App.tsx";
@@ -13,7 +13,7 @@ export const router = createBrowserRouter([
 
   {
     path: Paths.public.login,
-    Component: LoginPage,
+    Component: Login,
   },
 
   {

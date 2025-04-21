@@ -8,7 +8,7 @@ import reactDom from "eslint-plugin-react-dom";
 import eslintConfigPrettier from "eslint-config-prettier/flat";
 
 export default tseslint.config(
-  { ignores: ["dist"] },
+  { ignores: ["node_modules/*", "dist/*", "src/routeTree.gen.ts"] },
   {
     extends: [
       js.configs.recommended,
